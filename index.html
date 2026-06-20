@@ -29,6 +29,80 @@
             line-height: 1.6;
             color: var(--academic-navy);
             background-color: var(--light-bg);
+            padding-top: 70px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--academic-navy) 0%, #2c4563 100%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-brand:hover {
+            color: var(--accent-gold);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        .nav-links a.active {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -216,6 +290,11 @@
             50% { transform: translateY(10px); }
         }
 
+        /* Section Styles */
+        section {
+            scroll-margin-top: 70px;
+        }
+
         /* Research Highlights Section */
         .research-highlights {
             background-color: white;
@@ -327,7 +406,7 @@
             color: var(--academic-navy);
         }
 
-        /* Publications Section */
+        /* Publications/Research Section */
         .publications {
             background-color: white;
             padding: 80px 40px;
@@ -382,6 +461,52 @@
             line-height: 1.6;
         }
 
+        /* Sports Section */
+        .sports {
+            background-color: var(--light-bg);
+            padding: 80px 40px;
+        }
+
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sport-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .sport-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .sport-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .sport-card h3 {
+            font-size: 1.3rem;
+            color: var(--academic-navy);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .sport-card p {
+            color: var(--academic-gray);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, var(--academic-navy) 0%, #2c4563 100%);
@@ -433,6 +558,54 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            nav {
+                height: 60px;
+            }
+
+            nav .nav-container {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: linear-gradient(135deg, var(--academic-navy) 0%, #2c4563 100%);
+                padding: 20px 0;
+                gap: 0;
+            }
+
+            .nav-links.mobile-active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 30px;
+                border-bottom: none;
+                border-left: 3px solid transparent;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                border-left-color: var(--accent-gold);
+                border-bottom-color: transparent;
+            }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -458,6 +631,7 @@
             .research-highlights,
             .education,
             .publications,
+            .sports,
             .contact {
                 padding: 50px 20px;
             }
@@ -471,7 +645,8 @@
             }
 
             .highlights-grid,
-            .education-grid {
+            .education-grid,
+            .sports-grid {
                 gap: 20px;
             }
 
@@ -515,12 +690,38 @@
                 justify-content: center;
                 width: 100%;
             }
+
+            .nav-brand {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Oliver Ranyiwei</a>
+            <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#education" onclick="closeMenu()">Education</a></li>
+                <li><a href="#research" onclick="closeMenu()">Research</a></li>
+                <li><a href="#sports" onclick="closeMenu()">Sports</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Oliver Ranyiwei</h1>
@@ -552,44 +753,14 @@
             </div>
         </div>
 
-        <button class="scroll-indicator" onclick="document.getElementById('research').scrollIntoView({behavior: 'smooth'})">
+        <button class="scroll-indicator" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">
             <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </button>
     </section>
 
-    <!-- Research Highlights -->
-    <section class="research-highlights" id="research">
-        <div class="section-header">
-            <h2>Research Highlights</h2>
-            <p>Current research projects at the intersection of technology, innovation, and discovery</p>
-        </div>
-
-        <div class="highlights-grid">
-            <div class="highlight-card">
-                <div class="highlight-icon">🤖</div>
-                <h3>Machine Learning</h3>
-                <p>Developing and applying advanced machine learning algorithms to solve complex real-world problems and advance computational understanding.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon">📊</div>
-                <h3>Data Science</h3>
-                <p>Extracting meaningful insights from large-scale datasets and building data-driven solutions for modern challenges.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon">🚀</div>
-                <h3>Innovation</h3>
-                <p>Exploring how emerging technologies are transforming industries and creating new opportunities for research and application.</p>
-            </div>
-        </div>
-
-        <div class="view-all-research">
-            <a href="#publications" class="btn btn-primary">View All Research ↓</a>
-        </div>
-    </section>
-
-    <!-- Education -->
+    <!-- Education Section -->
     <section class="education" id="education">
         <div class="section-header">
             <h2>Education</h2>
@@ -614,8 +785,38 @@
         </div>
     </section>
 
+    <!-- Research Highlights -->
+    <section class="research-highlights" id="research">
+        <div class="section-header">
+            <h2>Research</h2>
+            <p>Current research projects at the intersection of technology, innovation, and discovery</p>
+        </div>
+
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Developing and applying advanced machine learning algorithms to solve complex real-world problems and advance computational understanding.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Extracting meaningful insights from large-scale datasets and building data-driven solutions for modern challenges.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🚀</div>
+                <h3>Innovation</h3>
+                <p>Exploring how emerging technologies are transforming industries and creating new opportunities for research and application.</p>
+            </div>
+        </div>
+
+        <div class="view-all-research">
+            <a href="#publications" class="btn btn-primary">View Publications ↓</a>
+        </div>
+    </section>
+
     <!-- Publications -->
-    <section class="publications" id="publications">
+    <section class="publications" id="publications" style="display: none;">
         <div class="section-header">
             <h2>Publications</h2>
             <p>Selected publications and research contributions</p>
@@ -664,6 +865,47 @@
         </div>
     </section>
 
+    <!-- Sports Section -->
+    <section class="sports" id="sports">
+        <div class="section-header">
+            <h2>Sports & Hobbies</h2>
+            <p>Beyond academia - My passion for sports and personal interests</p>
+        </div>
+
+        <div class="sports-grid">
+            <div class="sport-card">
+                <div class="sport-icon">⚽</div>
+                <h3>Football</h3>
+                <p>Football has been a lifelong passion. I enjoy both playing and analyzing the game strategically. The teamwork and discipline required align with my academic pursuits.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-icon">🏃</div>
+                <h3>Running</h3>
+                <p>Long-distance running keeps me fit and focused. It provides a balance to the sedentary nature of research work and clears my mind for breakthrough ideas.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-icon">🏊</div>
+                <h3>Swimming</h3>
+                <p>Swimming is my go-to activity for relaxation and maintaining overall health. It's an excellent low-impact exercise that complements my active lifestyle.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-icon">🎾</div>
+                <h3>Tennis</h3>
+                <p>Tennis challenges both my physical and mental agility. The quick decision-making involved mirrors the problem-solving skills needed in research.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-icon">🧗</div>
+                <h3>Rock Climbing</h3>
+                <p>Rock climbing pushes my limits and builds resilience. Each climb represents overcoming challenges, much like tackling complex research problems.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-icon">🚴</div>
+                <h3>Cycling</h3>
+                <p>Cycling allows me to explore nature while getting exercise. It's both a meditative practice and an adventure that helps me recharge and think creatively.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section class="contact" id="contact">
         <h2>Get In Touch</h2>
@@ -689,6 +931,38 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('mobile-active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('mobile-active');
+        }
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
         // Smooth scroll for buttons
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
