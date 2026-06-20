@@ -1,5 +1,5 @@
 
-# Oliver Ranyiwei
+# Oliver Ranyi Wei
 
 ## About Me
 I'm a [Your Title] at [Your Institution]. My research focuses on [your research area].
