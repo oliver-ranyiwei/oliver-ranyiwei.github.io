@@ -3,395 +3,711 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliver Ranyi Wei - Academic Researcher</title>
+    <title>Oliver Ranyiwei - Academic Researcher</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --accent-light: #ecf0f1;
-            --text-color: #34495e;
-            --light-text: #7f8c8d;
+            --academic-navy: #1a2b3d;
+            --academic-blue: #2e5090;
+            --academic-gray: #6b7280;
+            --accent-gold: #d4a574;
+            --light-bg: #f9fafb;
+            --white: #ffffff;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--academic-navy);
+            background-color: var(--light-bg);
         }
-        
-        /* Navigation */
-        nav {
-            background: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-        
-        nav .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        nav h1 {
-            font-size: 1.3em;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: var(--accent-color);
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e9f3 50%, #d4e4f7 100%);
+            position: relative;
+            overflow: hidden;
         }
-        
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(46, 80, 144, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
             font-weight: 700;
+            color: var(--academic-navy);
+            margin-bottom: 10px;
+            letter-spacing: -1px;
         }
-        
-        .hero p {
-            font-size: 1.3em;
-            opacity: 0.95;
+
+        .hero-content .name-subtitle {
+            font-size: 1.8rem;
+            color: var(--academic-gray);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero-content .title {
+            font-size: 1.3rem;
+            color: var(--academic-blue);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .hero-content .institution {
+            font-size: 1.1rem;
+            color: var(--academic-gray);
+            margin-bottom: 4px;
+        }
+
+        .hero-content .institution.highlight {
+            color: var(--academic-blue);
+            font-weight: 500;
+        }
+
+        .hero-bio {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: var(--academic-gray);
+            line-height: 1.8;
+        }
+
+        .hero-bio p {
+            margin-bottom: 15px;
+        }
+
+        .research-focus {
+            display: inline;
+            color: var(--academic-blue);
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--academic-blue);
+            color: white;
+            box-shadow: 0 4px 15px rgba(46, 80, 144, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--academic-navy);
+            box-shadow: 0 6px 20px rgba(46, 80, 144, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--academic-blue);
+            border: 2px solid var(--academic-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--academic-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 80%;
+            max-width: 300px;
+            aspect-ratio: 3/4;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--academic-gray);
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            z-index: 2;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .chevron {
+            width: 30px;
+            height: 30px;
+            color: var(--academic-gray);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* Research Highlights Section */
+        .research-highlights {
+            background-color: white;
+            padding: 80px 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--academic-navy);
             margin-bottom: 20px;
         }
-        
-        .hero-tagline {
-            font-size: 1em;
-            opacity: 0.8;
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--academic-gray);
             max-width: 600px;
             margin: 0 auto;
         }
-        
-        /* Main Content */
-        main {
-            padding: 60px 20px;
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
         }
-        
-        section {
-            margin-bottom: 50px;
+
+        .highlight-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--academic-blue);
         }
-        
-        h2 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
+
+        .highlight-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
         }
-        
-        h3 {
-            color: var(--accent-color);
-            font-size: 1.2em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        p {
+
+        .highlight-icon {
+            font-size: 2.5rem;
             margin-bottom: 15px;
-            line-height: 1.8;
-            color: var(--text-color);
         }
-        
-        ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        
-        li {
+
+        .highlight-card h3 {
+            font-size: 1.4rem;
+            color: var(--academic-navy);
             margin-bottom: 12px;
-            line-height: 1.8;
+            font-weight: 600;
         }
-        
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+
+        .highlight-card p {
+            color: var(--academic-gray);
+            line-height: 1.7;
+            font-size: 1rem;
         }
-        
-        a:hover {
-            color: #2980b9;
-            text-decoration: underline;
+
+        .view-all-research {
+            text-align: center;
         }
-        
-        /* Cards */
-        .cards {
+
+        .view-all-research .btn {
+            display: inline-flex;
+        }
+
+        /* Education Section */
+        .education {
+            background-color: var(--light-bg);
+            padding: 80px 40px;
+        }
+
+        .education-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        
-        .card {
+
+        .education-card {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--accent-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--academic-blue);
         }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-        }
-        
-        .card h3 {
-            margin-top: 0;
-        }
-        
-        /* Publication List */
-        .publication {
-            background: white;
-            padding: 20px;
+
+        .education-card h3 {
+            font-size: 1.3rem;
+            color: var(--academic-navy);
             margin-bottom: 15px;
-            border-radius: 6px;
-            border-left: 4px solid var(--accent-color);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        
-        .publication-title {
             font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 5px;
         }
-        
+
+        .education-detail {
+            margin-bottom: 10px;
+            color: var(--academic-gray);
+        }
+
+        .education-detail strong {
+            color: var(--academic-navy);
+        }
+
+        /* Publications Section */
+        .publications {
+            background-color: white;
+            padding: 80px 40px;
+        }
+
+        .publications-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--academic-blue);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--academic-navy);
+            margin-bottom: 8px;
+        }
+
+        .publication-title a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .publication-title a:hover {
+            color: var(--academic-navy);
+            text-decoration: underline;
+        }
+
         .publication-meta {
-            color: var(--light-text);
-            font-size: 0.95em;
+            color: var(--academic-gray);
+            font-size: 0.95rem;
             font-style: italic;
         }
-        
+
+        .publication-description {
+            margin-top: 10px;
+            color: var(--academic-gray);
+            line-height: 1.6;
+        }
+
         /* Contact Section */
-        .contact-box {
-            background: var(--accent-light);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 20px;
+        .contact {
+            background: linear-gradient(135deg, var(--academic-navy) 0%, #2c4563 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
         }
-        
-        .contact-item {
-            margin-bottom: 15px;
+
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
             display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-link {
+            display: inline-flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 6px;
         }
-        
-        .contact-item strong {
-            color: var(--primary-color);
-            min-width: 80px;
+
+        .contact-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
-        
+
         /* Footer */
         footer {
-            background: var(--primary-color);
-            color: white;
+            background-color: #1a2b3d;
+            color: #9ca3af;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
+            padding: 30px 40px;
+            font-size: 0.95rem;
         }
-        
-        footer p {
-            color: white;
-            margin: 5px 0;
-        }
-        
-        /* Responsive */
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 20px;
             }
-            
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9em;
+
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
-            
-            h2 {
-                font-size: 1.5em;
+
+            .hero-content .name-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-content .title {
+                font-size: 1.1rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .research-highlights,
+            .education,
+            .publications,
+            .contact {
+                padding: 50px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .highlights-grid,
+            .education-grid {
+                gap: 20px;
+            }
+
+            .contact-links {
+                gap: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .name-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-link {
+                justify-content: center;
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <h1>Oliver Ranyiwei</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Oliver Ranyiwei</h1>
-            <p>Academic Researcher & Scholar</p>
-            <p class="hero-tagline">Advancing knowledge through research in machine learning, data science, and artificial intelligence</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Oliver Ranyiwei</h1>
+                <p class="name-subtitle">(Oliver)</p>
+                
+                <p class="title">Academic Researcher</p>
+                <p class="institution">Department of [Your Department]</p>
+                <p class="institution highlight">[Your University Name]</p>
+
+                <div class="hero-bio">
+                    <p>I received my [degree type] in [Field] from [University] in [Year].</p>
+                    <p>My research lies at the intersection of <span class="research-focus">Machine Learning</span>, <span class="research-focus">Data Science</span>, and <span class="research-focus">Artificial Intelligence</span>. I leverage cutting-edge methods to investigate how emerging technologies are transforming various domains.</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="/cv.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="profile-photo">
+                    <img src="/profile.jpg" alt="Oliver Ranyiwei" style="display: none;">
+                    <div style="text-align: center;">
+                        <div>📷</div>
+                        <div style="font-size: 0.9rem; color: var(--academic-gray);">Add profile.jpg to /public</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="scroll-indicator" onclick="document.getElementById('research').scrollIntoView({behavior: 'smooth'})">
+            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </button>
+    </section>
+
+    <!-- Research Highlights -->
+    <section class="research-highlights" id="research">
+        <div class="section-header">
+            <h2>Research Highlights</h2>
+            <p>Current research projects at the intersection of technology, innovation, and discovery</p>
+        </div>
+
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Developing and applying advanced machine learning algorithms to solve complex real-world problems and advance computational understanding.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Extracting meaningful insights from large-scale datasets and building data-driven solutions for modern challenges.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🚀</div>
+                <h3>Innovation</h3>
+                <p>Exploring how emerging technologies are transforming industries and creating new opportunities for research and application.</p>
+            </div>
+        </div>
+
+        <div class="view-all-research">
+            <a href="#publications" class="btn btn-primary">View All Research ↓</a>
         </div>
     </section>
-    
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my academic homepage. I am a dedicated researcher passionate about advancing the frontiers of knowledge. With expertise in machine learning and data science, I strive to contribute meaningful insights to the scientific community through rigorous research and innovation.</p>
-            <p>I believe in collaborative research and open science. Feel free to reach out if you would like to discuss research opportunities or collaborations.</p>
-        </section>
-        
-        <!-- Research Section -->
-        <section id="research">
-            <h2>Research Interests</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>🤖 Machine Learning</h3>
-                    <p>Developing and applying advanced machine learning algorithms to solve complex real-world problems.</p>
-                </div>
-                <div class="card">
-                    <h3>📊 Data Science</h3>
-                    <p>Extracting meaningful insights from large-scale datasets and building data-driven solutions.</p>
-                </div>
-                <div class="card">
-                    <h3>🗣️ Natural Language Processing</h3>
-                    <p>Working on NLP techniques to understand and process human language at scale.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Education Section -->
-        <section id="education">
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <div class="section-header">
             <h2>Education</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Master's Degree</h3>
-                    <p><strong>Program:</strong> Computer Science</p>
-                    <p><strong>University:</strong> [Your University Name]</p>
-                    <p><strong>Graduation:</strong> [Year]</p>
-                </div>
-                <div class="card">
-                    <h3>Bachelor's Degree</h3>
-                    <p><strong>Program:</strong> Computer Science</p>
-                    <p><strong>University:</strong> [Your University Name]</p>
-                    <p><strong>Graduation:</strong> [Year]</p>
-                </div>
+            <p>Academic Background and Training</p>
+        </div>
+
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Master's Degree</h3>
+                <div class="education-detail"><strong>Field:</strong> Computer Science / [Your Field]</div>
+                <div class="education-detail"><strong>University:</strong> [University Name]</div>
+                <div class="education-detail"><strong>Graduation:</strong> [Year]</div>
+                <div class="education-detail"><strong>Advisor:</strong> [Professor Name]</div>
             </div>
-        </section>
-        
-        <!-- Publications Section -->
-        <section id="publications">
+            <div class="education-card">
+                <h3>Bachelor's Degree</h3>
+                <div class="education-detail"><strong>Field:</strong> Computer Science / [Your Field]</div>
+                <div class="education-detail"><strong>University:</strong> [University Name]</div>
+                <div class="education-detail"><strong>Graduation:</strong> [Year]</div>
+                <div class="education-detail"><strong>Honors:</strong> [If applicable]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="publications" id="publications">
+        <div class="section-header">
             <h2>Publications</h2>
-            <div class="publication">
-                <div class="publication-title">📄 <a href="#">Paper Title 1: Your Research Topic</a></div>
+            <p>Selected publications and research contributions</p>
+        </div>
+
+        <div class="publications-list">
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 1: Your Research Topic</a>
+                </div>
                 <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <p style="margin-top: 8px; color: var(--light-text);">Brief description of your research work, key findings, and contributions.</p>
+                <div class="publication-description">
+                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
+                </div>
             </div>
-            <div class="publication">
-                <div class="publication-title">📄 <a href="#">Paper Title 2: Another Research Topic</a></div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 2: Another Research Area</a>
+                </div>
                 <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <p style="margin-top: 8px; color: var(--light-text);">Brief description of your research work, key findings, and contributions.</p>
+                <div class="publication-description">
+                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
+                </div>
             </div>
-            <div class="publication">
-                <div class="publication-title">📄 <a href="#">Paper Title 3: Your Latest Work</a></div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 3: Your Latest Work</a>
+                </div>
                 <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <p style="margin-top: 8px; color: var(--light-text);">Brief description of your research work, key findings, and contributions.</p>
-            </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Project Name 1</h3>
-                    <p>Description of your project, technologies used, and impact. Include links to GitHub repositories or project pages if available.</p>
-                    <a href="#">Learn More →</a>
-                </div>
-                <div class="card">
-                    <h3>Project Name 2</h3>
-                    <p>Description of your project, technologies used, and impact. Include links to GitHub repositories or project pages if available.</p>
-                    <a href="#">Learn More →</a>
-                </div>
-                <div class="card">
-                    <h3>Project Name 3</h3>
-                    <p>Description of your project, technologies used, and impact. Include links to GitHub repositories or project pages if available.</p>
-                    <a href="#">Learn More →</a>
+                <div class="publication-description">
+                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
                 </div>
             </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-box">
-                <div class="contact-item">
-                    <strong>📧 Email:</strong>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 4: Emerging Research</a>
                 </div>
-                <div class="contact-item">
-                    <strong>💼 LinkedIn:</strong>
-                    <a href="https://linkedin.com/in/oliver-ranyiwei" target="_blank">linkedin.com/in/oliver-ranyiwei</a>
-                </div>
-                <div class="contact-item">
-                    <strong>🔗 GitHub:</strong>
-                    <a href="https://github.com/oliver-ranyiwei" target="_blank">github.com/oliver-ranyiwei</a>
-                </div>
-                <div class="contact-item">
-                    <strong>📍 Location:</strong>
-                    <span>[Your City, Country]</span>
+                <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
+                <div class="publication-description">
+                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
                 </div>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="contact-link">
+                <span>📧</span> Email
+            </a>
+            <a href="https://linkedin.com/in/oliver-ranyiwei" target="_blank" class="contact-link">
+                <span>💼</span> LinkedIn
+            </a>
+            <a href="https://github.com/oliver-ranyiwei" target="_blank" class="contact-link">
+                <span>🔗</span> GitHub
+            </a>
+            <a href="https://twitter.com/oliver-ranyiwei" target="_blank" class="contact-link">
+                <span>𝕏</span> Twitter
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Oliver Ranyiwei</p>
-        <p>Academic Homepage • All rights reserved</p>
+        <p>&copy; 2026 Oliver Ranyiwei. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scroll for buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Profile photo error handler
+        const profileImg = document.querySelector('.profile-photo img');
+        if (profileImg) {
+            profileImg.addEventListener('error', function() {
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+            });
+        }
+    </script>
 </body>
 </html>
