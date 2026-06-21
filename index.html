@@ -318,30 +318,28 @@
 
         /* Updates Section */
         .updates {
-            background-color: var(--light-bg);
+            background-color: white;
             padding: 80px 40px;
         }
 
-        .updates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
+        .updates-list {
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .update-card {
+        .update-item {
             background: white;
             border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            margin-bottom: 20px;
             border-left: 4px solid var(--accent-gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
         }
 
-        .update-card:hover {
+        .update-item:hover {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
+            transform: translateX(5px);
         }
 
         .update-date {
@@ -353,22 +351,22 @@
             letter-spacing: 0.5px;
         }
 
-        .update-card h3 {
-            font-size: 1.2rem;
+        .update-item h3 {
+            font-size: 1.3rem;
             color: var(--academic-navy);
             margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .update-card p {
+        .update-item p {
             color: var(--academic-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Education Section */
         .education {
-            background-color: white;
+            background-color: var(--light-bg);
             padding: 80px 40px;
         }
 
@@ -417,17 +415,20 @@
             box-shadow: 0 0 0 3px var(--academic-blue);
         }
 
-        .badge-placeholder {
+        .badge-container {
             width: 100%;
-            height: 100px;
-            background: linear-gradient(135deg, #f0f4f8 0%, #e0e9f3 100%);
-            border-radius: 8px;
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            border: 2px solid var(--academic-blue);
-            font-size: 2rem;
+            border-radius: 8px;
+        }
+
+        .badge-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .education-card h3 {
@@ -451,7 +452,7 @@
 
         /* Research Section */
         .research {
-            background-color: var(--light-bg);
+            background-color: white;
             padding: 80px 40px;
         }
 
@@ -464,7 +465,7 @@
         }
 
         .highlight-card {
-            background: white;
+            background: var(--light-bg);
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -517,7 +518,7 @@
         }
 
         .publication-item {
-            background: white;
+            background: var(--light-bg);
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 15px;
@@ -571,7 +572,7 @@
 
         /* Entrepreneurship Section */
         .entrepreneurship {
-            background-color: white;
+            background-color: var(--light-bg);
             padding: 80px 40px;
         }
 
@@ -617,7 +618,7 @@
 
         /* Sports Section */
         .sports {
-            background-color: var(--light-bg);
+            background-color: white;
             padding: 80px 40px;
         }
 
@@ -630,7 +631,7 @@
         }
 
         .sport-card {
-            background: white;
+            background: var(--light-bg);
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -708,6 +709,15 @@
             text-align: center;
             padding: 30px 40px;
             font-size: 0.95rem;
+        }
+
+        /* Page-specific content */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
         }
 
         /* Responsive Design */
@@ -820,8 +830,7 @@
 
             .research-highlights,
             .entrepreneurship-grid,
-            .sports-grid,
-            .updates-grid {
+            .sports-grid {
                 gap: 20px;
             }
 
@@ -888,15 +897,14 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-brand">Oliver Ranyiwei</a>
+            <a href="index.html" class="nav-brand">Oliver Ranyiwei</a>
             <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#updates" onclick="closeMenu()">Updates</a></li>
-                <li><a href="#education" onclick="closeMenu()">Education</a></li>
-                <li><a href="#research" onclick="closeMenu()">Research</a></li>
-                <li><a href="#entrepreneurship" onclick="closeMenu()">Entrepreneurship</a></li>
-                <li><a href="#sports" onclick="closeMenu()">Sports</a></li>
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="education.html" onclick="closeMenu()">Education</a></li>
+                <li><a href="research.html" onclick="closeMenu()">Research</a></li>
+                <li><a href="entrepreneurship.html" onclick="closeMenu()">Entrepreneurship</a></li>
+                <li><a href="sports.html" onclick="closeMenu()">Sports</a></li>
             </ul>
         </div>
     </nav>
@@ -918,7 +926,7 @@
                 </div>
 
                 <div class="hero-buttons">
-                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="research.html" class="btn btn-primary">View Research</a>
                     <a href="/cv.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
                 </div>
             </div>
@@ -945,235 +953,43 @@
     <section class="updates" id="updates">
         <div class="section-header">
             <h2>Updates</h2>
-            <p>Latest news and announcements from my academic journey</p>
+            <p>Latest news and announcements</p>
         </div>
 
-        <div class="updates-grid">
-            <div class="update-card">
-                <div class="update-date">📅 Coming Soon</div>
-                <h3>Conference Presentation</h3>
-                <p>I will be attending and presenting at [Conference Name], discussing recent findings in machine learning applications.</p>
-            </div>
-            <div class="update-card">
-                <div class="update-date">📅 Coming Soon</div>
-                <h3>Workshop Participation</h3>
-                <p>Selected to participate in the International Workshop on Data Science, presenting cutting-edge research methodologies.</p>
-            </div>
-            <div class="update-card">
-                <div class="update-date">📅 Coming Soon</div>
-                <h3>Research Collaboration</h3>
-                <p>Excited to announce a new research collaboration with leading institutions on AI and emerging technologies.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <div class="section-header">
-            <h2>Education</h2>
-            <p>Academic Background and Training</p>
-        </div>
-
-        <div class="education-timeline">
-            <div class="education-card">
-                <div class="badge-placeholder">
-                    🎓
-                </div>
-                <h3>Bachelor's Degree</h3>
-                <div class="education-detail">
-                    <strong>University:</strong>
-                    Colgate University
-                </div>
-                <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
-                </div>
-                <div class="education-detail">
-                    <strong>Graduation:</strong>
-                    [Year]
-                </div>
-                <div class="education-detail">
-                    <strong>GPA:</strong>
-                    [Your GPA]
-                </div>
+        <div class="updates-list">
+            <div class="update-item">
+                <div class="update-date">📅 June 2026</div>
+                <h3>Paper Accepted at ACL 2026</h3>
+                <p>Excited to announce that our paper "Machine Learning in Action" has been accepted for presentation at the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026) in New York.</p>
             </div>
 
-            <div class="education-card">
-                <div class="badge-placeholder">
-                    🎓
-                </div>
-                <h3>Master's Degree</h3>
-                <div class="education-detail">
-                    <strong>University:</strong>
-                    ESMT Berlin
-                </div>
-                <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
-                </div>
-                <div class="education-detail">
-                    <strong>Graduation:</strong>
-                    [Year]
-                </div>
-                <div class="education-detail">
-                    <strong>Advisor:</strong>
-                    [Professor Name]
-                </div>
+            <div class="update-item">
+                <div class="update-date">📅 May 2026</div>
+                <h3>Keynote Speaker at AI Summit</h3>
+                <p>Honored to be invited as a keynote speaker at the International AI Summit 2026. I will be discussing "The Future of Artificial Intelligence in Academic Research" alongside leading researchers from top universities worldwide.</p>
             </div>
 
-            <div class="education-card">
-                <div class="badge-placeholder">
-                    🎓
-                </div>
-                <h3>Doctor's Degree (Ph.D.)</h3>
-                <div class="education-detail">
-                    <strong>University:</strong>
-                    HKUST
-                </div>
-                <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
-                </div>
-                <div class="education-detail">
-                    <strong>Graduation:</strong>
-                    [Year]
-                </div>
-                <div class="education-detail">
-                    <strong>Advisor:</strong>
-                    [Professor Name]
-                </div>
+            <div class="update-item">
+                <div class="update-date">📅 April 2026</div>
+                <h3>New Research Project Launch</h3>
+                <p>Launching a new collaborative research project with the University of Oxford focusing on ethical AI applications. This multi-year initiative aims to develop responsible AI frameworks for real-world deployment.</p>
+            </div>
+
+            <div class="update-item">
+                <div class="update-date">📅 March 2026</div>
+                <h3>Visiting Scholar at MIT</h3>
+                <p>Beginning a semester-long visiting scholar appointment at MIT's Computer Science and Artificial Intelligence Laboratory (CSAIL). This collaboration will focus on advancing machine learning techniques for complex optimization problems.</p>
+            </div>
+
+            <div class="update-item">
+                <div class="update-date">📅 February 2026</div>
+                <h3>Workshop Organizer</h3>
+                <p>Co-organizing the "AI for Social Good" workshop at NeurIPS 2026. We welcome submissions on applications of machine learning to address global challenges in healthcare, education, and sustainability.</p>
             </div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section class="research" id="research">
-        <div class="section-header">
-            <h2>Research</h2>
-            <p>Current research projects at the intersection of technology, innovation, and discovery</p>
-        </div>
-
-        <div class="research-highlights">
-            <div class="highlight-card">
-                <div class="highlight-icon">🤖</div>
-                <h3>Machine Learning</h3>
-                <p>Developing and applying advanced machine learning algorithms to solve complex real-world problems and advance computational understanding.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon">📊</div>
-                <h3>Data Science</h3>
-                <p>Extracting meaningful insights from large-scale datasets and building data-driven solutions for modern challenges.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon">🚀</div>
-                <h3>Innovation</h3>
-                <p>Exploring how emerging technologies are transforming industries and creating new opportunities for research and application.</p>
-            </div>
-        </div>
-
-        <!-- Publications Subsection -->
-        <div class="research-publications">
-            <!-- Working Papers -->
-            <div class="publications-subsection">
-                <h3>📝 Working Papers</h3>
-                <div class="empty-state">
-                    <p>Working papers coming soon...</p>
-                </div>
-            </div>
-
-            <!-- Published Papers & Conferences -->
-            <div class="publications-subsection">
-                <h3>📄 Published Papers & Conference Proceedings</h3>
-                <div class="empty-state">
-                    <p>Publications coming soon...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Entrepreneurship Section -->
-    <section class="entrepreneurship" id="entrepreneurship">
-        <div class="section-header">
-            <h2>Entrepreneurship</h2>
-            <p>Business ventures and innovation initiatives</p>
-        </div>
-
-        <div class="entrepreneurship-grid">
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">💼</div>
-                <h3>Startup Venture 1</h3>
-                <p>Founded and led a technology startup focused on [specific domain]. Successfully raised funding and built a team of 15+ engineers.</p>
-            </div>
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">🚀</div>
-                <h3>Innovation Lab</h3>
-                <p>Co-founded an innovation lab dedicated to developing cutting-edge solutions at the intersection of AI and business.</p>
-            </div>
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">🤝</div>
-                <h3>Business Consulting</h3>
-                <p>Provide strategic consulting services to startups and enterprises on digital transformation and technology adoption.</p>
-            </div>
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">📈</div>
-                <h3>Investor Relations</h3>
-                <p>Active investor and advisor to multiple early-stage companies in AI, machine learning, and data science domains.</p>
-            </div>
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">🎓</div>
-                <h3>Mentorship Program</h3>
-                <p>Mentor aspiring entrepreneurs and innovators, sharing experiences and guidance on startup development and growth.</p>
-            </div>
-            <div class="entrepreneurship-card">
-                <div class="entrepreneurship-icon">💡</div>
-                <h3>Industry Partnership</h3>
-                <p>Collaborate with leading corporations on joint innovation projects and technology transfer initiatives.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sports Section -->
-    <section class="sports" id="sports">
-        <div class="section-header">
-            <h2>Sports & Hobbies</h2>
-            <p>Beyond academia - My passion for sports and personal interests</p>
-        </div>
-
-        <div class="sports-grid">
-            <div class="sport-card">
-                <div class="sport-icon">⚽</div>
-                <h3>Football</h3>
-                <p>Football has been a lifelong passion. I enjoy both playing and analyzing the game strategically. The teamwork and discipline required align with my academic pursuits.</p>
-            </div>
-            <div class="sport-card">
-                <div class="sport-icon">🏃</div>
-                <h3>Running</h3>
-                <p>Long-distance running keeps me fit and focused. It provides a balance to the sedentary nature of research work and clears my mind for breakthrough ideas.</p>
-            </div>
-            <div class="sport-card">
-                <div class="sport-icon">🏊</div>
-                <h3>Swimming</h3>
-                <p>Swimming is my go-to activity for relaxation and maintaining overall health. It's an excellent low-impact exercise that complements my active lifestyle.</p>
-            </div>
-            <div class="sport-card">
-                <div class="sport-icon">🎾</div>
-                <h3>Tennis</h3>
-                <p>Tennis challenges both my physical and mental agility. The quick decision-making involved mirrors the problem-solving skills needed in research.</p>
-            </div>
-            <div class="sport-card">
-                <div class="sport-icon">🧗</div>
-                <h3>Rock Climbing</h3>
-                <p>Rock climbing pushes my limits and builds resilience. Each climb represents overcoming challenges, much like tackling complex research problems.</p>
-            </div>
-            <div class="sport-card">
-                <div class="sport-icon">🚴</div>
-                <h3>Cycling</h3>
-                <p>Cycling allows me to explore nature while getting exercise. It's both a meditative practice and an adventure that helps me recharge and think creatively.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-links">
@@ -1209,46 +1025,23 @@
             navLinks.classList.remove('mobile-active');
         }
 
-        // Update active nav link on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
+        // Update active nav link based on current page
+        function updateActiveNav() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             const navLinks = document.querySelectorAll('.nav-links a');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
+            
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
                     link.classList.add('active');
                 }
             });
-        });
-
-        // Smooth scroll for buttons
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Profile photo error handler
-        const profileImg = document.querySelector('.profile-photo img');
-        if (profileImg) {
-            profileImg.addEventListener('error', function() {
-                this.style.display = 'none';
-                this.nextElementSibling.style.display = 'flex';
-            });
         }
+
+        // Call on page load
+        window.addEventListener('load', updateActiveNav);
+        document.addEventListener('DOMContentLoaded', updateActiveNav);
     </script>
 </body>
 </html>
