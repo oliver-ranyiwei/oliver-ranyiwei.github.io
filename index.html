@@ -71,7 +71,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
             margin: 0;
             padding: 0;
         }
@@ -83,7 +83,7 @@
             transition: all 0.3s ease;
             padding: 8px 12px;
             border-bottom: 3px solid transparent;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
@@ -316,6 +316,56 @@
             margin: 0 auto;
         }
 
+        /* Updates Section */
+        .updates {
+            background-color: var(--light-bg);
+            padding: 80px 40px;
+        }
+
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .update-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .update-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .update-date {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .update-card h3 {
+            font-size: 1.2rem;
+            color: var(--academic-navy);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .update-card p {
+            color: var(--academic-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         /* Education Section */
         .education {
             background-color: white;
@@ -376,13 +426,8 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            border: 2px dashed var(--academic-gray);
-        }
-
-        .badge-placeholder p {
-            color: var(--academic-gray);
-            font-size: 0.9rem;
-            margin: 0;
+            border: 2px solid var(--academic-blue);
+            font-size: 2rem;
         }
 
         .education-card h3 {
@@ -458,12 +503,17 @@
             border-top: 2px solid #e5e7eb;
         }
 
-        .research-publications h3 {
-            font-size: 1.5rem;
+        .publications-subsection {
+            margin-bottom: 50px;
+        }
+
+        .publications-subsection h3 {
+            font-size: 1.3rem;
             color: var(--academic-navy);
-            margin-bottom: 30px;
-            text-align: center;
+            margin-bottom: 25px;
             font-weight: 600;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         .publication-item {
@@ -510,6 +560,13 @@
             color: var(--academic-gray);
             font-size: 0.95rem;
             line-height: 1.5;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 30px;
+            color: var(--academic-gray);
+            font-style: italic;
         }
 
         /* Entrepreneurship Section */
@@ -666,6 +723,14 @@
             .education-card::before {
                 top: -25px;
             }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -679,10 +744,6 @@
 
             nav .nav-container {
                 padding: 0 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
             }
 
             .menu-toggle {
@@ -740,6 +801,7 @@
                 order: -1;
             }
 
+            .updates,
             .education,
             .research,
             .entrepreneurship,
@@ -758,7 +820,8 @@
 
             .research-highlights,
             .entrepreneurship-grid,
-            .sports-grid {
+            .sports-grid,
+            .updates-grid {
                 gap: 20px;
             }
 
@@ -829,6 +892,7 @@
             <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#updates" onclick="closeMenu()">Updates</a></li>
                 <li><a href="#education" onclick="closeMenu()">Education</a></li>
                 <li><a href="#research" onclick="closeMenu()">Research</a></li>
                 <li><a href="#entrepreneurship" onclick="closeMenu()">Entrepreneurship</a></li>
@@ -870,11 +934,37 @@
             </div>
         </div>
 
-        <button class="scroll-indicator" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">
+        <button class="scroll-indicator" onclick="document.getElementById('updates').scrollIntoView({behavior: 'smooth'})">
             <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </button>
+    </section>
+
+    <!-- Updates Section -->
+    <section class="updates" id="updates">
+        <div class="section-header">
+            <h2>Updates</h2>
+            <p>Latest news and announcements from my academic journey</p>
+        </div>
+
+        <div class="updates-grid">
+            <div class="update-card">
+                <div class="update-date">📅 Coming Soon</div>
+                <h3>Conference Presentation</h3>
+                <p>I will be attending and presenting at [Conference Name], discussing recent findings in machine learning applications.</p>
+            </div>
+            <div class="update-card">
+                <div class="update-date">📅 Coming Soon</div>
+                <h3>Workshop Participation</h3>
+                <p>Selected to participate in the International Workshop on Data Science, presenting cutting-edge research methodologies.</p>
+            </div>
+            <div class="update-card">
+                <div class="update-date">📅 Coming Soon</div>
+                <h3>Research Collaboration</h3>
+                <p>Excited to announce a new research collaboration with leading institutions on AI and emerging technologies.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Education Section -->
@@ -887,16 +977,16 @@
         <div class="education-timeline">
             <div class="education-card">
                 <div class="badge-placeholder">
-                    <p>🎓 University Badge</p>
+                    🎓
                 </div>
                 <h3>Bachelor's Degree</h3>
                 <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
+                    <strong>University:</strong>
+                    Colgate University
                 </div>
                 <div class="education-detail">
-                    <strong>University:</strong>
-                    [University Name]
+                    <strong>Field:</strong>
+                    [Your Field]
                 </div>
                 <div class="education-detail">
                     <strong>Graduation:</strong>
@@ -910,16 +1000,16 @@
 
             <div class="education-card">
                 <div class="badge-placeholder">
-                    <p>🎓 University Badge</p>
+                    🎓
                 </div>
                 <h3>Master's Degree</h3>
                 <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
+                    <strong>University:</strong>
+                    ESMT Berlin
                 </div>
                 <div class="education-detail">
-                    <strong>University:</strong>
-                    [University Name]
+                    <strong>Field:</strong>
+                    [Your Field]
                 </div>
                 <div class="education-detail">
                     <strong>Graduation:</strong>
@@ -933,16 +1023,16 @@
 
             <div class="education-card">
                 <div class="badge-placeholder">
-                    <p>🎓 University Badge</p>
+                    🎓
                 </div>
                 <h3>Doctor's Degree (Ph.D.)</h3>
                 <div class="education-detail">
-                    <strong>Field:</strong>
-                    [Your Field]
+                    <strong>University:</strong>
+                    HKUST
                 </div>
                 <div class="education-detail">
-                    <strong>University:</strong>
-                    [University Name]
+                    <strong>Field:</strong>
+                    [Your Field]
                 </div>
                 <div class="education-detail">
                     <strong>Graduation:</strong>
@@ -983,55 +1073,19 @@
 
         <!-- Publications Subsection -->
         <div class="research-publications">
-            <h3>📄 Recent Publications</h3>
-            
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 1: Deep Learning for Pattern Recognition</a>
-                </div>
-                <div class="publication-meta">IEEE Transactions on Machine Learning • 2024</div>
-                <div class="publication-description">
-                    This paper explores novel deep learning architectures for pattern recognition in complex datasets, achieving state-of-the-art results on benchmark datasets.
+            <!-- Working Papers -->
+            <div class="publications-subsection">
+                <h3>📝 Working Papers</h3>
+                <div class="empty-state">
+                    <p>Working papers coming soon...</p>
                 </div>
             </div>
 
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 2: Data-Driven Decision Making</a>
-                </div>
-                <div class="publication-meta">Journal of Data Science • 2024</div>
-                <div class="publication-description">
-                    An investigation into how data science methodologies can enhance decision-making processes in enterprise environments.
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 3: AI Applications in Industry</a>
-                </div>
-                <div class="publication-meta">International Conference on AI • 2023</div>
-                <div class="publication-description">
-                    A comprehensive review of artificial intelligence applications transforming modern industries and creating new business opportunities.
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 4: Ethics in Machine Learning</a>
-                </div>
-                <div class="publication-meta">ACM Computing Surveys • 2023</div>
-                <div class="publication-description">
-                    An analysis of ethical considerations and best practices for responsible machine learning development and deployment.
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 5: Scalable Data Pipelines</a>
-                </div>
-                <div class="publication-meta">Workshop on Big Data • 2023</div>
-                <div class="publication-description">
-                    Innovative approaches to building scalable and efficient data pipelines for processing large-scale information systems.
+            <!-- Published Papers & Conferences -->
+            <div class="publications-subsection">
+                <h3>📄 Published Papers & Conference Proceedings</h3>
+                <div class="empty-state">
+                    <p>Publications coming soon...</p>
                 </div>
             </div>
         </div>
