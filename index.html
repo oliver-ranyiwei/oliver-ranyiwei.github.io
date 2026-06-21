@@ -71,7 +71,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 30px;
             margin: 0;
             padding: 0;
         }
@@ -83,6 +83,7 @@
             transition: all 0.3s ease;
             padding: 8px 12px;
             border-bottom: 3px solid transparent;
+            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
@@ -295,12 +296,7 @@
             scroll-margin-top: 70px;
         }
 
-        /* Research Highlights Section */
-        .research-highlights {
-            background-color: white;
-            padding: 80px 40px;
-        }
-
+        /* Section Header */
         .section-header {
             text-align: center;
             margin-bottom: 60px;
@@ -320,12 +316,106 @@
             margin: 0 auto;
         }
 
-        .highlights-grid {
+        /* Education Section */
+        .education {
+            background-color: white;
+            padding: 80px 40px;
+        }
+
+        .education-timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: 16.67%;
+            right: 16.67%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            z-index: 0;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--academic-blue);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--academic-blue);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--academic-blue);
+        }
+
+        .badge-placeholder {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e9f3 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 2px dashed var(--academic-gray);
+        }
+
+        .badge-placeholder p {
+            color: var(--academic-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .education-card h3 {
+            font-size: 1.3rem;
+            color: var(--academic-navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .education-detail {
+            margin-bottom: 10px;
+            color: var(--academic-gray);
+            font-size: 0.95rem;
+        }
+
+        .education-detail strong {
+            color: var(--academic-navy);
+            display: block;
+            font-weight: 600;
+        }
+
+        /* Research Section */
+        .research {
+            background-color: var(--light-bg);
+            padding: 80px 40px;
+        }
+
+        .research-highlights {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             max-width: 1200px;
-            margin: 0 auto 40px;
+            margin: 0 auto 60px;
         }
 
         .highlight-card {
@@ -360,68 +450,27 @@
             font-size: 1rem;
         }
 
-        .view-all-research {
-            text-align: center;
-        }
-
-        .view-all-research .btn {
-            display: inline-flex;
-        }
-
-        /* Education Section */
-        .education {
-            background-color: var(--light-bg);
-            padding: 80px 40px;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .education-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-            border-left: 4px solid var(--academic-blue);
-        }
-
-        .education-card h3 {
-            font-size: 1.3rem;
-            color: var(--academic-navy);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .education-detail {
-            margin-bottom: 10px;
-            color: var(--academic-gray);
-        }
-
-        .education-detail strong {
-            color: var(--academic-navy);
-        }
-
-        /* Publications/Research Section */
-        .publications {
-            background-color: white;
-            padding: 80px 40px;
-        }
-
-        .publications-list {
+        /* Publications Section */
+        .research-publications {
             max-width: 1000px;
             margin: 0 auto;
+            padding-top: 40px;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .research-publications h3 {
+            font-size: 1.5rem;
+            color: var(--academic-navy);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
         }
 
         .publication-item {
             background: white;
             border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
             border-left: 4px solid var(--academic-blue);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
@@ -429,13 +478,14 @@
 
         .publication-item:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateX(5px);
         }
 
         .publication-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--academic-navy);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .publication-title a {
@@ -451,14 +501,61 @@
 
         .publication-meta {
             color: var(--academic-gray);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-style: italic;
+            margin-bottom: 8px;
         }
 
         .publication-description {
-            margin-top: 10px;
             color: var(--academic-gray);
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Entrepreneurship Section */
+        .entrepreneurship {
+            background-color: white;
+            padding: 80px 40px;
+        }
+
+        .entrepreneurship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .entrepreneurship-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .entrepreneurship-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .entrepreneurship-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .entrepreneurship-card h3 {
+            font-size: 1.3rem;
+            color: var(--academic-navy);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .entrepreneurship-card p {
+            color: var(--academic-gray);
+            line-height: 1.7;
+            font-size: 1rem;
         }
 
         /* Sports Section */
@@ -557,6 +654,20 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .education-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .education-timeline::before {
+                display: none;
+            }
+
+            .education-card::before {
+                top: -25px;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
                 padding-top: 60px;
@@ -571,7 +682,7 @@
             }
 
             .nav-links {
-                gap: 20px;
+                gap: 15px;
             }
 
             .menu-toggle {
@@ -598,6 +709,7 @@
                 padding: 15px 30px;
                 border-bottom: none;
                 border-left: 3px solid transparent;
+                font-size: 1rem;
             }
 
             .nav-links a:hover,
@@ -628,9 +740,9 @@
                 order: -1;
             }
 
-            .research-highlights,
             .education,
-            .publications,
+            .research,
+            .entrepreneurship,
             .sports,
             .contact {
                 padding: 50px 20px;
@@ -644,8 +756,8 @@
                 font-size: 1rem;
             }
 
-            .highlights-grid,
-            .education-grid,
+            .research-highlights,
+            .entrepreneurship-grid,
             .sports-grid {
                 gap: 20px;
             }
@@ -665,6 +777,10 @@
             .hero {
                 min-height: auto;
                 padding: 60px 20px;
+            }
+
+            .education-timeline {
+                gap: 30px;
             }
         }
 
@@ -715,6 +831,7 @@
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
                 <li><a href="#education" onclick="closeMenu()">Education</a></li>
                 <li><a href="#research" onclick="closeMenu()">Research</a></li>
+                <li><a href="#entrepreneurship" onclick="closeMenu()">Entrepreneurship</a></li>
                 <li><a href="#sports" onclick="closeMenu()">Sports</a></li>
             </ul>
         </div>
@@ -767,32 +884,86 @@
             <p>Academic Background and Training</p>
         </div>
 
-        <div class="education-grid">
+        <div class="education-timeline">
             <div class="education-card">
-                <h3>Master's Degree</h3>
-                <div class="education-detail"><strong>Field:</strong> Computer Science / [Your Field]</div>
-                <div class="education-detail"><strong>University:</strong> [University Name]</div>
-                <div class="education-detail"><strong>Graduation:</strong> [Year]</div>
-                <div class="education-detail"><strong>Advisor:</strong> [Professor Name]</div>
-            </div>
-            <div class="education-card">
+                <div class="badge-placeholder">
+                    <p>🎓 University Badge</p>
+                </div>
                 <h3>Bachelor's Degree</h3>
-                <div class="education-detail"><strong>Field:</strong> Computer Science / [Your Field]</div>
-                <div class="education-detail"><strong>University:</strong> [University Name]</div>
-                <div class="education-detail"><strong>Graduation:</strong> [Year]</div>
-                <div class="education-detail"><strong>Honors:</strong> [If applicable]</div>
+                <div class="education-detail">
+                    <strong>Field:</strong>
+                    [Your Field]
+                </div>
+                <div class="education-detail">
+                    <strong>University:</strong>
+                    [University Name]
+                </div>
+                <div class="education-detail">
+                    <strong>Graduation:</strong>
+                    [Year]
+                </div>
+                <div class="education-detail">
+                    <strong>GPA:</strong>
+                    [Your GPA]
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="badge-placeholder">
+                    <p>🎓 University Badge</p>
+                </div>
+                <h3>Master's Degree</h3>
+                <div class="education-detail">
+                    <strong>Field:</strong>
+                    [Your Field]
+                </div>
+                <div class="education-detail">
+                    <strong>University:</strong>
+                    [University Name]
+                </div>
+                <div class="education-detail">
+                    <strong>Graduation:</strong>
+                    [Year]
+                </div>
+                <div class="education-detail">
+                    <strong>Advisor:</strong>
+                    [Professor Name]
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="badge-placeholder">
+                    <p>🎓 University Badge</p>
+                </div>
+                <h3>Doctor's Degree (Ph.D.)</h3>
+                <div class="education-detail">
+                    <strong>Field:</strong>
+                    [Your Field]
+                </div>
+                <div class="education-detail">
+                    <strong>University:</strong>
+                    [University Name]
+                </div>
+                <div class="education-detail">
+                    <strong>Graduation:</strong>
+                    [Year]
+                </div>
+                <div class="education-detail">
+                    <strong>Advisor:</strong>
+                    [Professor Name]
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Highlights -->
-    <section class="research-highlights" id="research">
+    <!-- Research Section -->
+    <section class="research" id="research">
         <div class="section-header">
             <h2>Research</h2>
             <p>Current research projects at the intersection of technology, innovation, and discovery</p>
         </div>
 
-        <div class="highlights-grid">
+        <div class="research-highlights">
             <div class="highlight-card">
                 <div class="highlight-icon">🤖</div>
                 <h3>Machine Learning</h3>
@@ -810,57 +981,99 @@
             </div>
         </div>
 
-        <div class="view-all-research">
-            <a href="#publications" class="btn btn-primary">View Publications ↓</a>
+        <!-- Publications Subsection -->
+        <div class="research-publications">
+            <h3>📄 Recent Publications</h3>
+            
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 1: Deep Learning for Pattern Recognition</a>
+                </div>
+                <div class="publication-meta">IEEE Transactions on Machine Learning • 2024</div>
+                <div class="publication-description">
+                    This paper explores novel deep learning architectures for pattern recognition in complex datasets, achieving state-of-the-art results on benchmark datasets.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 2: Data-Driven Decision Making</a>
+                </div>
+                <div class="publication-meta">Journal of Data Science • 2024</div>
+                <div class="publication-description">
+                    An investigation into how data science methodologies can enhance decision-making processes in enterprise environments.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 3: AI Applications in Industry</a>
+                </div>
+                <div class="publication-meta">International Conference on AI • 2023</div>
+                <div class="publication-description">
+                    A comprehensive review of artificial intelligence applications transforming modern industries and creating new business opportunities.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 4: Ethics in Machine Learning</a>
+                </div>
+                <div class="publication-meta">ACM Computing Surveys • 2023</div>
+                <div class="publication-description">
+                    An analysis of ethical considerations and best practices for responsible machine learning development and deployment.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="#">Paper Title 5: Scalable Data Pipelines</a>
+                </div>
+                <div class="publication-meta">Workshop on Big Data • 2023</div>
+                <div class="publication-description">
+                    Innovative approaches to building scalable and efficient data pipelines for processing large-scale information systems.
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Publications -->
-    <section class="publications" id="publications" style="display: none;">
+    <!-- Entrepreneurship Section -->
+    <section class="entrepreneurship" id="entrepreneurship">
         <div class="section-header">
-            <h2>Publications</h2>
-            <p>Selected publications and research contributions</p>
+            <h2>Entrepreneurship</h2>
+            <p>Business ventures and innovation initiatives</p>
         </div>
 
-        <div class="publications-list">
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 1: Your Research Topic</a>
-                </div>
-                <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <div class="publication-description">
-                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
-                </div>
+        <div class="entrepreneurship-grid">
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">💼</div>
+                <h3>Startup Venture 1</h3>
+                <p>Founded and led a technology startup focused on [specific domain]. Successfully raised funding and built a team of 15+ engineers.</p>
             </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 2: Another Research Area</a>
-                </div>
-                <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <div class="publication-description">
-                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
-                </div>
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">🚀</div>
+                <h3>Innovation Lab</h3>
+                <p>Co-founded an innovation lab dedicated to developing cutting-edge solutions at the intersection of AI and business.</p>
             </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 3: Your Latest Work</a>
-                </div>
-                <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <div class="publication-description">
-                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
-                </div>
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">🤝</div>
+                <h3>Business Consulting</h3>
+                <p>Provide strategic consulting services to startups and enterprises on digital transformation and technology adoption.</p>
             </div>
-
-            <div class="publication-item">
-                <div class="publication-title">
-                    <a href="#">Paper Title 4: Emerging Research</a>
-                </div>
-                <div class="publication-meta">Journal Name or Conference Name • [Year]</div>
-                <div class="publication-description">
-                    Brief description of your research work, key findings, and contributions. Include the impact and relevance of your research.
-                </div>
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">📈</div>
+                <h3>Investor Relations</h3>
+                <p>Active investor and advisor to multiple early-stage companies in AI, machine learning, and data science domains.</p>
+            </div>
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">🎓</div>
+                <h3>Mentorship Program</h3>
+                <p>Mentor aspiring entrepreneurs and innovators, sharing experiences and guidance on startup development and growth.</p>
+            </div>
+            <div class="entrepreneurship-card">
+                <div class="entrepreneurship-icon">💡</div>
+                <h3>Industry Partnership</h3>
+                <p>Collaborate with leading corporations on joint innovation projects and technology transfer initiatives.</p>
             </div>
         </div>
     </section>
