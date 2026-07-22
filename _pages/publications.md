@@ -7,12 +7,13 @@ nav: true
 nav_order: 2
 ---
 
-<!-- _pages/publications.md -->
-
-<div class="publications">
-
-<h3>Working Papers</h3>
-
-<p>"The Impact of AI Summaries on Creators and Viewers of Video-Sharing Platforms" with Jiali Zhou, Weiyin Hong, Kai-Lung Hui. Invited for revision at MISQ.</p>
-
+<div class="working-papers">
+  <h2>Working Papers</h2>
+  <ul>
+    <li>
+      <strong>The Impact of AI Summaries on Creators and Viewers of Video-Sharing Platforms</strong><br>
+      Oliver Ranyiwei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
+      Invited for revision at MISQ<br>
+    </li>
+  </ul>
 </div>
