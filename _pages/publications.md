@@ -31,7 +31,7 @@ nav_order: 2
     <li>
       <strong>Does Platform Seclusion Build a Digital “Sin City”? – Evidence from Fine-tuned GenAI Model Hosting Platforms?</strong><br>
       Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
-      Presented at HKUST Summer Workshop 2026
+      Presented at HKUST Summer Workshop 2026<br>
       Invited for revision at MISQ<br>
     </li>
 
