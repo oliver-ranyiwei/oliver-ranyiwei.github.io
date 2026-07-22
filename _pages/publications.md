@@ -15,7 +15,7 @@ nav_order: 2
       Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
       Presented at INFORMS 2024, WITS Feeder Workshop 2024, WISE 2024<br>
       <strong>BEST STUDENT PAPER AWARD WISE 2024</strong><br> 
-      Fun fact: This is a paper based on my own comapny's data.
+      Fun fact: This is a paper based on my own comapny's data.<br> 
       Invited for revision at MISQ<br>
     </li>
   </ul>
