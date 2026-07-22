@@ -12,7 +12,7 @@ nav_order: 2
   <ul>
     <li>
       <strong>The Impact of AI Summaries on Creators and Viewers of Video-Sharing Platforms</strong><br>
-      Oliver Ranyiwei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
+      Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
       Invited for revision at MISQ<br>
     </li>
   </ul>
