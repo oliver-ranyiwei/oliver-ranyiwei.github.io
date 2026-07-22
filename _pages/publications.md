@@ -32,7 +32,7 @@ description: ""
       Presented at HKUST Summer Workshop 2026<br>
       Invited for revision at MISQ<br>
     </li>
-
+  </ul>
     <ul>
     <li>
       <strong>PreCare: An Interactive Avatar for Empowering Patient Disclosure and Informing Care During the Pre-Consultation Stage</strong><br>
