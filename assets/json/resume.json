@@ -1,0 +1,65 @@
+{
+  "basics": {
+    "name": "Oliver Ran",
+    "label": "Researcher",
+    "image": "",
+    "email": "",
+    "phone": "",
+    "summary": "TODO: Add a brief professional summary here.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "name": "TODO: Your Institution/Company",
+      "position": "TODO: Your Position",
+      "location": "TODO: City, Country",
+      "startDate": "2020-01-01",
+      "endDate": "",
+      "summary": "TODO: Brief description of your role.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "TODO: Your University",
+      "location": "TODO: City, Country",
+      "url": "",
+      "area": "TODO: Your Field",
+      "studyType": "TODO: PhD / MS / BS",
+      "startDate": "2020-01-01",
+      "endDate": "",
+      "score": "",
+      "courses": [],
+      "highlights": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "",
+      "icon": "fa-solid fa-code",
+      "keywords": ["TODO: Python", "TODO: JavaScript"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": []
+}

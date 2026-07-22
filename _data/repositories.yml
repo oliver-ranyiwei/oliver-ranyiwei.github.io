@@ -1,0 +1,8 @@
+github_users:
+  - oliver-ranyiwei # TODO: add other GitHub usernames whose repos you want to showcase
+
+repo_description_lines_max: 2
+
+github_repos:
+  # TODO: Replace with your own GitHub repositories.
+  # - oliver-ranyiwei/your-repo-name

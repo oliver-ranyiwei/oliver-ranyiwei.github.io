@@ -1,0 +1,8 @@
+# Journal/venue abbreviation color mapping for publications page.
+# TODO: Add your publication venues and their colors or URLs.
+# Example:
+# "NeurIPS":
+#   color: "#7b5ca5"
+#
+# "ICML":
+#   url: https://icml.cc/
