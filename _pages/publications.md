@@ -33,12 +33,12 @@ description: ""
       Invited for revision at MISQ<br>
     </li>
   </ul>
+  
     <ul>
     <li>
       <strong>PreCare: An Interactive Avatar for Empowering Patient Disclosure and Informing Care During the Pre-Consultation Stage</strong><br>
       Oliver Ranyi Wei, Sihan Fang, Xiaohui Zhang,Gang Chen, Huimin Zhao<br>
       Preparing submission to an UTD journal<br>
-
     </li>
     </ul>
  
