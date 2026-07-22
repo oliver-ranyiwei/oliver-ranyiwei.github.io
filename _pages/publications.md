@@ -32,8 +32,13 @@ description: ""
     </li>
     <li style="margin-bottom: 20px;">
       <strong>PreCare: An Interactive Avatar for Empowering Patient Disclosure and Informing Care During the Pre-Consultation Stage</strong><br>
-      Oliver Ranyi Wei, Sihan Fang, Xiaohui Zhang,Gang Chen, Huimin Zhao<br>
+      Oliver Ranyi Wei, Sihan Fang, Xiaohui Zhang, Gang Chen, Huimin Zhao<br>
       Preparing submission to an UTD journal<br>
+    </li>
+      <li>
+      <strong>Nudge or Sludge? Streamer’s Selling Tactics and Consumers’ Product Returns: Theory and Evidence</strong><br>
+      Oliver Ranyi Wei, Xin Weng, Jiali Zhou, Amit Mehra<br>
+      Preparing submission to an Management Science<br>
     </li>
   </ul>
 </div>
