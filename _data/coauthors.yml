@@ -1,0 +1,8 @@
+# This file contains co-author information for auto-linking in the bibliography.
+# Format: lastname (lowercase) -> list of firstname variants + URL
+# See https://github.com/alshedivat/al-folio for documentation.
+
+# TODO: Add your co-authors below. Example:
+# "smith":
+#   - firstname: ["John", "J."]
+#     url: https://example.com/john-smith

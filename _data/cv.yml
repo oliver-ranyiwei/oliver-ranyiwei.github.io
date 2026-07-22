@@ -1,0 +1,64 @@
+cv:
+  # TODO: Fill in your personal information below.
+  name: Oliver Ran
+  label: Researcher # e.g., PhD Student, Software Engineer, Data Scientist
+  email: # TODO: your email address
+  location: # TODO: e.g., "City, Country"
+  image: ""
+  summary: # TODO: A short summary/bio for your CV.
+
+  social_networks:
+    # TODO: Add/remove social networks as needed.
+    # - network: X
+    #   username: yourhandle
+    - network: GitHub
+      username: oliver-ranyiwei
+
+  sections:
+    Education:
+      # TODO: Fill in your education history.
+      - institution: Your University
+        location: City, Country
+        url: https://your-university.edu
+        area: Your Field of Study
+        studyType: PhD # or BS, MS, etc.
+        start_date: 2020
+        end_date: present
+        highlights:
+          - TODO - add highlights here
+
+    Experience:
+      # TODO: Fill in your work/research experience.
+      - company: Your Institution or Company
+        position: Your Position
+        location: City, Country
+        start_date: 2020
+        end_date: present
+        highlights:
+          - TODO - add highlights here
+
+    Publications:
+      # TODO: Add your publications here. Alternatively, use _bibliography/papers.bib.
+      # - title: Your Paper Title
+      #   authors:
+      #     - Oliver Ran
+      #   publisher: Journal or Conference Name
+      #   releaseDate: 2024-01-01
+      #   url: https://link-to-paper.com
+
+    Skills:
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, JavaScript, MATLAB" # TODO: update with your skills
+
+    Languages:
+      - name: English
+        summary: "Fluent"
+      # TODO: Add additional languages
+
+    # Awards:
+    #   - title: Award Name
+    #     date: 2023-01-01
+    #     awarder: Awarding Organization
+    #     summary: Brief description of the award.
