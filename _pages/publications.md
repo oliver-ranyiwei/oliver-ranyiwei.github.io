@@ -13,8 +13,17 @@ nav_order: 2
     <li>
       <strong>The Impact of AI Summaries on Creators and Viewers of Video-Sharing Platforms</strong><br>
       Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
-      Presented at INFORMS 2024, WISE 2024<br>
+      Presented at INFORMS 2024, WITS Feeder Workshop 2024, WISE 2024<br>
+      BEST STUDENT PAPER AWARD WISE 2024<br> 
       Invited for revision at MISQ<br>
+    </li>
+  </ul>
+    <ul>
+    <li>
+      <strong>How Livestreaming E-commerce Reshapes Consumers’ Product Return Behaviors: A Triprocessing Theory Perspective</strong><br>
+      Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
+      Presented at HKUST Summer Workshop 2023, WISE 2023<br>
+      Invited for revision at ISR<br>
     </li>
   </ul>
 </div>
