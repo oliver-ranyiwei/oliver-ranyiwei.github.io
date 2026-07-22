@@ -15,6 +15,7 @@ nav_order: 2
       Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
       Presented at INFORMS 2024, WITS Feeder Workshop 2024, WISE 2024<br>
       <strong>BEST STUDENT PAPER AWARD WISE 2024</strong><br> 
+      Fun fact: This is a paper based on my own comapny's data.
       Invited for revision at MISQ<br>
     </li>
   </ul>
@@ -25,5 +26,12 @@ nav_order: 2
       Presented at HKUST Summer Workshop 2023, WISE 2023<br>
       Invited for revision at ISR<br>
     </li>
+    <li>
+      <strong>Does Platform Seclusion Build a Digital “Sin City”? – Evidence from Fine-tuned GenAI Model Hosting Platforms?</strong><br>
+      Oliver Ranyi Wei, Jiali Zhou, Weiyin Hong, Kai-Lung Hui<br>
+      Presented at HKUST Summer Workshop 2026
+      Invited for revision at MISQ<br>
+    </li>
+      
   </ul>
 </div>
